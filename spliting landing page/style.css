@@ -1,0 +1,111 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+
+h2 {
+    color: white;
+    font-size: 4rem; 
+    position: absolute;
+    left:50%;
+    top:20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.split{
+    width: 50%;
+    position:absolute;
+    height: 100vh;
+    transition: all 0.9s ease-in-out;
+    overflow: hidden;  /*hidden text if it bigger than its container*/
+}
+
+.ps5::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(65, 65, 207, 0.7);
+    
+}
+
+.xbox::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(38, 44, 38, 0.7);
+    
+}
+
+
+.split.ps5{
+    left:0;
+    background-image: url("ps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.split.xbox{
+    right:0;  /*put it to the right*/
+    background-image: url("xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+button{
+    position:absolute;
+    top:40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 75px;
+    background-color: transparent;
+    border: 4px white solid;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.xbox button:hover{
+    background-color: green;
+    border: 4px green solid;
+}
+
+.ps5 button:hover{
+    background-color: blue;
+    border: 4px blue solid;
+}
+
+
+.hover-ps5 .ps5{
+    width: 70%;
+}
+.hover-ps5 .xbox{
+    width: 30%;
+}
+
+.hover-xbox .xbox{
+    width: 70%;
+}
+
+.hover-xbox .ps5{
+    width: 30%;
+}
