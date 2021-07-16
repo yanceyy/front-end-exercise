@@ -20,6 +20,7 @@ body {
 }
 
 
+
 .card{
     width: 800px;
     background-color: white;
@@ -50,4 +51,9 @@ button{
     border:0;
     color:white;
     font-size: 15px;
+    cursor: pointer;
+}
+
+button:active{
+ transform: scale(0.98);
 }
