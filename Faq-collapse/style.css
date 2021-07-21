@@ -1,0 +1,101 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: #f6f7fb;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.container .question-list{
+    list-style: none;
+}
+
+
+
+.container .question-list li{
+    padding: 10px 20px;
+    width: 600px;
+    margin: 20px;
+    border: 1px #9fa4a8 solid;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow:hidden;
+}
+
+h3 {
+    font-weight:bold;
+    padding: 20px 25px;
+}
+.container h1{
+   text-align: center;
+   text-transform: capitalize;
+}
+
+i.fas {
+    font-size: 30px;
+    position: absolute;
+    right: 50px;
+    top:30px;
+    cursor: pointer;
+}
+
+
+li p{
+   display: none;
+   padding: 0 20px 20px;
+}
+
+li.active{
+    background-color: snow;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+ }
+
+
+
+ /* fun way of using unicode as the background image*/
+ li.active::before, li.active::after{
+    content: "\f075";
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+ }
+
+
+ li.active::before{
+     color:blue;
+     top:-10px;
+     left:-30px;
+    transform: rotateY(180deg);
+ }
+
+li.active p{
+    display: block;
+ }
+
+ li.active i{
+    color:grey;
+    right:45px;
+
+ }
+
+ li.active p{
+    display: block;
+ }

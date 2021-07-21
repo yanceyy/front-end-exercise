@@ -24,8 +24,13 @@ button{
     margin: 5px 16px;
     cursor: pointer;
     border-radius: 5px;
+    text-transform: capitalize;
 }
 
 button:hover{
     opacity: 0.9;
+}
+
+button:active{
+    transform: scale(0.98);
 }
