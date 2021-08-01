@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3494e4;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.container h3 {
+    text-align: center;
+    font-size: 1.17em;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.totalwater,
+.bottle {
+    border: #144fc6 4px solid;
+    overflow: hidden;
+
+}
+
+.totalwater {
+    width: 142px;
+    height: 322px;
+    margin: 30px auto;
+    color: #144fc6;
+    border-bottom-left-radius: 37px;
+    border-bottom-right-radius: 37px;
+
+}
+
+.remained {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s linear;
+}
+
+.meter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.meter h6 {
+    font-size: 20px;
+}
+
+.meter p {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.drinked {
+    background-color: #6ab3f8;
+    height: 0;
+    position: relative;
+    transition: all 0.2s linear;
+    overflow: hidden;
+}
+
+.drinked p {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.container p {
+    text-align: center;
+}
+
+.bottles {
+    display: flex;
+    width: 230px;
+    height: 210px;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottle {
+    margin: 0 2.5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width: 50px;
+    height: 95px;
+    color: #144fc6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+
+.bottle.active {
+    color: white;
+    background-color: #6ab3f8;
+}
+
+.indicator {
+    word-spacing: 2px;
+}
