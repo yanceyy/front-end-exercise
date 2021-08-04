@@ -6,6 +6,8 @@ const bottles = document.querySelector(".bottles")
 const NUM_BOTTLES = 8
 let currentDrinkCups=0;
 
+
+/* create the bottles and bind click event */
 function createBottom(i){
     const bottle =  document.createElement("div")
     bottle.className = "bottle"
@@ -19,6 +21,7 @@ function createBottom(i){
 
             const remainedValue = (1-currentClickIndex/8)*100+"%";
             const drinkedValue = currentClickIndex/8*100+"%";
+            // change the height the two inner container
             remained.style.height = remainedValue;
             drinked.style.height =  drinkedValue;
             drinkerWater.innerText = drinkedValue;
@@ -31,8 +34,7 @@ function createBottom(i){
             for(let j=0;j<currentClickIndex;j++){
                 bottles.children[j].classList.add("active")
             }
-            currentDrinkCups=currentClickIndex;
-            console.log(1-currentClickIndex/8+"%")}
+            currentDrinkCups=currentClickIndex;}
     )
     return bottle
 }
