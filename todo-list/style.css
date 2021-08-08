@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 15px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f7fb;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+h1.title{
+    font-size: 13rem;
+    color:rgb(179, 131, 226);
+    opacity: 0.4;
+}
+
+div.container{
+    margin-top:8rem;
+    width:27rem;
+    box-shadow: 0 3px 8px #DDD;
+}
+
+div.container > input.todoInput{
+    width:100%;
+    height: 4.5rem;
+    font-size: 2rem;
+    padding:0 1.8rem;
+    border: none;
+
+    outline: none;
+    border: 1px solid transparent;
+}
+
+p.inhint{
+    width:13.5rem;
+    text-align: center;
+    height: 5rem;
+    font-size: 1rem;
+    color:grey;
+    margin:3.5rem auto;
+    opacity: 0.6;
+}
+
+div.container > input.todoInput::placeholder{
+    color:#DDD;
+}
+
+div.container > input.todoInput:focus{
+    border: 1px solid purple;
+    border-radius: 4px;
+}
+
+div.container > ul{
+    list-style-type: none;
+    text-align: left;
+}
+
+div.container > ul > li{
+    width:100%;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-top: 1px rgba(0, 0, 0, 0.1) solid;
+    cursor: pointer;
+}
+
+div.container > ul > li.finished{
+    color:rgba(0,0,0,0.3);
+    text-decoration: line-through 2px;
+}
