@@ -37,7 +37,6 @@ div.container > input.todoInput{
     font-size: 2rem;
     padding:0 1.8rem;
     border: none;
-
     outline: none;
     border: 1px solid transparent;
 }
