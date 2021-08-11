@@ -8,6 +8,15 @@ class renderMovies {
   constructor() {
     this.container = document.querySelector(".container");
     this.input = document.querySelector("input");
+    this.header = document.querySelector(".header");
+    window.addEventListener("scroll",(e)=>{
+      console.log(this.header.offsetHeight )
+      if(window.scrollY > this.header.offsetHeight) {
+        this.header.classList.add('active')
+    } else {
+      this.header.classList.remove('active')
+    }
+    })
     this.input.onkeydown = (e) => {
       e = e || window.e;
       if (e.keyCode === 13) {
